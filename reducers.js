@@ -1,9 +1,5 @@
 import { buyCake } from "./actions";
 
-//the simplest form of a reducer is (previousState, action) => newState
-//but if we want to have a reducer, we first need to have a state and an action creator defined first
-//from our principle, the state in redux specified that we only have one store for all states
-
 //assume your state only have one numberOfCakes which is a numeric value
 const initialState = {
     numOfCakes: 10
