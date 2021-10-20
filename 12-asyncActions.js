@@ -1,3 +1,7 @@
+import redux from 'redux';
+
+const createStore = redux.createStore;
+
 const initialState = {
     loading: false,
     users: [],
@@ -52,3 +56,5 @@ const reducer = (state = initialState, actions) =>{
         default: return state
     }
 }
+
+const store = createStore(reducer);
