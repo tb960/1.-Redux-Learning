@@ -4,6 +4,8 @@ import axios from 'axios';
 
 const createStore = redux.createStore;
 const applyMiddleware = redux.applyMiddleware;
+//why do we need to add a default on thunkMiddleware?
+const thunkMiddleware = ReduxThunk.default;
 
 const initialState = {
     loading: false,
@@ -80,6 +82,6 @@ const fetchUsers = () =>{
     }
 }
 
-const store = createStore(reducer, applyMiddleware(ReduxThunk));
+const store = createStore(reducer, applyMiddleware(thunkMiddleware));
 store.subscribe(()=>{console.log('Updated state',store.getState())});
 store.dispatch(fetchUsers());
