@@ -2,7 +2,7 @@
 
 //assume your state only have one numberOfCakes which is a numeric value
 const initialState = {
-    numOfCakes: 10
+    numOfCakes: 10,
 }
 
 //pass this initialState as an argument to the reducer function
