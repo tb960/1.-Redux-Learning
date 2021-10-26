@@ -16,7 +16,7 @@ const CakeContainer = (props) => {
 //where in the file will be logic for selecting state.cake.numof...
 const mapStateToProps = (state) =>{
     return{
-        numOfCakes: state.numOfCakes
+        numOfCakes: state.cake.numOfCakes
     }
 }
 
@@ -26,6 +26,10 @@ const mapDispatchToProps = (dispatch) =>{
     }
 }
 
+//this export will connect us to the store in the main App.js file
+//when we export, we connect the map states to props and map Dispatch to props to the store
+//the store originally will have the state but the action is not inside the store
+//hence we need to import the action creator here and map the action to the dispacth function and pass to the store through connect
 export default connect(
     mapStateToProps,
     mapDispatchToProps
