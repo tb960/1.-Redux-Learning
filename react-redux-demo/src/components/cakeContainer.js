@@ -1,12 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { buyCake } from '../redux/';
+import { useState } from 'react';
 
 const CakeContainer = (props) => {
+    const [number, setNumber] = useState("hello");
+
+    const message = () =>{
+        console.log(number);
+    }
     return(
         <div>
             <h2>Number of cakes {props.numOfCakes}</h2>
             <button onClick={props.buyCake}>Buy Cake</button>
+            <button onClick={message}>log Button</button>
         </div>
     );
 }
